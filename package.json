@@ -4,7 +4,9 @@
   "description": "second electron app build by tutorial ",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "dev": "npx electronmon ."
   },
   "keywords": [
     "Electron",
@@ -16,6 +18,7 @@
   "author": "Shahzaib Shakeel Cheema",
   "license": "MIT",
   "dependencies": {
-    "electron": "^25.3.0"
+    "electron": "^25.3.0",
+    "electronmon": "^2.0.2"
   }
 }
