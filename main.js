@@ -11,14 +11,24 @@ function createmainwindow() {
     title: "Electron App 2",
     width: 1000,
     height: 600,
+    webPreferences: {
+      contextIsolation: true,
+      nodeIntegration: true,
+      preload: path.join(__dirname, "preload.js"),
+    },
   });
+
+  //   mainWindow.webContents.openDevTools();
+
   const startUrl = url.format({
-    pathname: path.join(__dirname, "index.html"),
+    // pathname: path.join("http://Localhost:3000"),
+    pathname: path.join(__dirname, "./react-electron/build/index.html"),
     protocol: "file",
   });
   //
 
-  mainWindow.loadURL(startUrl);
+  //   mainWindow.loadURL(startUrl);
+  mainWindow.loadURL("http://Localhost:3000");
 }
 
 app.whenReady().then(createmainwindow);
